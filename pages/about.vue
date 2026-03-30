@@ -50,7 +50,7 @@
             <p>
               Je suis <strong class="text-text-primary">Souhail Freij</strong>, développeur web passionné,
               formé à l'<strong class="text-text-primary">EEDN</strong>.
-              Avant le code, j'ai travaillé comme <strong class="text-text-primary">agent de piste en aviation</strong> —
+              Avant le code, j'ai travaillé comme <strong class="text-text-primary">Aircraft Turnaround Coordinator</strong> —
               un environnement où chaque décision compte et où l'erreur n'est pas permise.
             </p>
             <p>
@@ -152,7 +152,7 @@ const values = [
 const timeline = [
   {
     icon: '✈️',
-    title: 'Agent de Piste — Aviation',
+    title: 'Aircraft Turnaround Coordinator — Aviation',
     period: '2019 – 2022',
     desc: "Coordination des opérations au sol dans un environnement critique et réglementé. Gestion des départs/arrivées d'aéronefs, sécurité opérationnelle, communication avec les équipages. Formation aux procédures d'urgence.",
   },

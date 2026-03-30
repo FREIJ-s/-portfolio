@@ -167,7 +167,7 @@ const overviewCards = [
   {
     icon: '✈️',
     title: 'Profil Atypique',
-    desc: "Ex-agent de piste en aviation : gestion de la pression, sécurité et précision — des soft skills rares dans le dev.",
+    desc: "Ex-Aircraft Turnaround Coordinator : gestion de la pression, sécurité et précision — des soft skills rares dans le dev.",
   },
 ]
 
