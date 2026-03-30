@@ -23,30 +23,18 @@
       <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
         <!-- Logo -->
-        <NuxtLink to="/" class="logo">SF<span style="color:#6366f1">.</span></NuxtLink>
+        <NuxtLink to="/" class="logo">SF<span style="color:#6366f1"></span></NuxtLink>
 
         <!-- Desktop links -->
         <div class="hidden md:flex items-center gap-1">
-          <NuxtLink
-            v-for="item in navItems"
-            :key="item.path"
-            :to="item.path"
-            class="nav-link"
-          >{{ item.label }}</NuxtLink>
-          <a
-            href="https://github.com/FREIJ-s"
-            target="_blank"
-            rel="noopener"
-            class="nav-cta"
-          >GitHub</a>
+          <NuxtLink v-for="item in navItems" :key="item.path" :to="item.path" class="nav-link">{{ item.label }}
+          </NuxtLink>
+          <a href="https://github.com/FREIJ-s" target="_blank" rel="noopener" class="nav-cta">GitHub</a>
         </div>
 
         <!-- Mobile toggle -->
-        <button
-          class="hamburger-btn md:hidden"
-          :aria-label="mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
-          @click="mobileOpen = !mobileOpen"
-        >
+        <button class="hamburger-btn md:hidden" :aria-label="mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
+          @click="mobileOpen = !mobileOpen">
           <div :class="['hamburger-lines', mobileOpen && 'open']">
             <span /><span /><span />
           </div>
@@ -56,20 +44,10 @@
       <!-- Mobile panel -->
       <Transition name="mobile-nav">
         <div v-if="mobileOpen" class="md:hidden mobile-nav-panel">
-          <NuxtLink
-            v-for="item in navItems"
-            :key="item.path"
-            :to="item.path"
-            class="mobile-nav-link"
-            @click="mobileOpen = false"
-          >{{ item.label }}</NuxtLink>
-          <a
-            href="https://github.com/FREIJ-s"
-            target="_blank"
-            rel="noopener"
-            class="mobile-nav-link"
-            @click="mobileOpen = false"
-          >GitHub</a>
+          <NuxtLink v-for="item in navItems" :key="item.path" :to="item.path" class="mobile-nav-link"
+            @click="mobileOpen = false">{{ item.label }}</NuxtLink>
+          <a href="https://github.com/FREIJ-s" target="_blank" rel="noopener" class="mobile-nav-link"
+            @click="mobileOpen = false">GitHub</a>
         </div>
       </Transition>
     </nav>
@@ -89,18 +67,10 @@
             — Construit avec Nuxt 3 &amp; Tailwind CSS
           </p>
           <div class="flex items-center gap-4">
-            <a
-              href="https://github.com/FREIJ-s"
-              target="_blank"
-              rel="noopener"
-              class="text-text-secondary hover:text-accent-light transition-colors text-sm"
-            >GitHub</a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener"
-              class="text-text-secondary hover:text-accent-light transition-colors text-sm"
-            >LinkedIn</a>
+            <a href="https://github.com/FREIJ-s" target="_blank" rel="noopener"
+              class="text-text-secondary hover:text-accent-light transition-colors text-sm">GitHub</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener"
+              class="text-text-secondary hover:text-accent-light transition-colors text-sm">LinkedIn</a>
           </div>
         </div>
       </div>
@@ -115,11 +85,11 @@ const scrolled = ref(false)
 const mobileOpen = ref(false)
 
 const navItems = [
-  { path: '/',         label: 'Accueil' },
-  { path: '/about',    label: 'À propos' },
-  { path: '/skills',   label: 'Compétences' },
+  { path: '/', label: 'Accueil' },
+  { path: '/about', label: 'À propos' },
+  { path: '/skills', label: 'Compétences' },
   { path: '/projects', label: 'Projets' },
-  { path: '/contact',  label: 'Contact' },
+  { path: '/contact', label: 'Contact' },
 ]
 
 onMounted(() => {
