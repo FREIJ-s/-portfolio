@@ -32,7 +32,7 @@
         <div
           v-for="skill in filteredSkills"
           :key="skill.name"
-          class="skill-icon-card reveal"
+          class="skill-icon-card"
         >
           <img
             :src="skill.icon"
@@ -150,9 +150,12 @@ const learning = [
 ]
 
 function setTab(id: string) {
-  activeTab.value = id
+  if (activeTab.value === id) return
   barsAnimated.value = false
-  nextTick(() => { barsAnimated.value = true })
+  activeTab.value = id
+  nextTick(() => {
+    setTimeout(() => { barsAnimated.value = true }, 50)
+  })
 }
 
 onMounted(() => {
